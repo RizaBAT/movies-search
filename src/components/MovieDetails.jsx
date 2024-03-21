@@ -11,7 +11,7 @@ export default function MovieDetails() {
   useEffect(() => {
     async function fetchMovieDetails() {
       try {
-        const apiKey = "22ad44ca2f3f0a624567898765432345678f8c";
+        const apiKey = "22ad44ca2f3f0a6744e8069536f08f8c";
         const response = await axios.get(
           `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`
         );
