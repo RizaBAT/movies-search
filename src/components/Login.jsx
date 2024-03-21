@@ -42,8 +42,10 @@ export default function Login() {
   };
 
   const handleLogin = () => {
+    const storedEmail = localStorage.getItem("email");
+    const storedPassword = localStorage.getItem("password");
     if (isRegistered) {
-      if (email !== "user@example.com" && pass !== "password123") {
+      if (email !== storedEmail || pass !== storedPassword){
         localStorage.setItem("isLoggedIn", "true");
         setIsLoggedIn(true);
         setError("");
@@ -58,7 +60,7 @@ export default function Login() {
 
   const handleLogout = () => {
     localStorage.removeItem("email");
-    localStorage.removeItem("password");
+    localStorage.removeItem("password"); 
     setIsLoggedIn(false);
     setEmail("");
     setPass("");
