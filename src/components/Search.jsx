@@ -14,7 +14,7 @@ export default function Search() {
     setError(null);
 
     try {
-      const apiKey = "22ad44ca2f3f0a6744e8069536f08f8c";
+      const apiKey = "22ad44ca2f3f0a6744e2345678999888876654345676545654567654308f8c";
       let resp = await axios.get(
         `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchTerm}`
       );
