@@ -39,7 +39,7 @@ export default function Search() {
   };
 
   useEffect(() => {
-    getMovieData("popular");
+    getMovieData("");
   }, []);
 
   return (
