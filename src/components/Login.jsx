@@ -41,11 +41,11 @@ export default function Login() {
     }
   };
 
-  const handleLogin = () => {
+ const handleLogin = () => {
     const storedEmail = localStorage.getItem("email");
     const storedPassword = localStorage.getItem("password");
     if (isRegistered) {
-      if (email !== storedEmail || pass !== storedPassword){
+      if (email === storedEmail && pass === storedPassword){
         localStorage.setItem("isLoggedIn", "true");
         setIsLoggedIn(true);
         setError("");
@@ -56,7 +56,7 @@ export default function Login() {
     } else {
       setError("You must register first.");
     }
-  };
+};
 
   const handleLogout = () => {
     localStorage.removeItem("email");
