@@ -45,7 +45,7 @@ export default function Login() {
     const storedEmail = localStorage.getItem("email");
     const storedPassword = localStorage.getItem("password");
     if (isRegistered) {
-      if (email !== storedEmail && pass !== storedPassword){
+      if (email === storedEmail && pass === storedPassword){
         localStorage.setItem("isLoggedIn", "true");
         setIsLoggedIn(true);
         setError("");
